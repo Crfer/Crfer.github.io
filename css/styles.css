@@ -1,6 +1,6 @@
 :root {
     --oxford-blue: #15233e;
-    --moonstone: #6d9ea7;
+    --moonstone: #ecede8;
     --tiffany-blue: #93e6e6;
     --slate-gray: #707f83;
     --mountbatten-pink: #96717f;
@@ -74,6 +74,25 @@ section {
 section h2 {
     color: var(--mountbatten-pink); /* Títulos de sección */
     margin-bottom: 10px;
+}
+
+a {
+    color: var(--mountbatten-pink); /* Color del enlace en el cuerpo del texto */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Suave transición para el color del enlace */
+}
+
+a:hover {
+    color: var(--tiffany-blue); /* Cambiar a Tiffany Blue en hover */
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--slate-gray); /* Cambiar a Slate Gray si el enlace ya ha sido visitado */
+}
+
+a:active {
+    color: var(--moonstone); /* Cambiar a Mountbatten Pink cuando el enlace está activo */
 }
 
 footer {
