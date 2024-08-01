@@ -1,19 +1,23 @@
 :root {
     --oxford-blue: #15233e;
-    --moonstone: #cbc9c5;
+    --moonstone: #6d9ea7;
     --tiffany-blue: #93e6e6;
     --slate-gray: #707f83;
     --mountbatten-pink: #96717f;
+    --background: #15233e;
+    --text-color: #e6e6e6;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-    background-color: var(--oxford-blue); /* Fondo azul oscuro */
-    color: var(--tiffany-blue); /* Texto principal */
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -21,17 +25,9 @@ header {
     padding: 20px;
     text-align: center;
     border-bottom: 2px solid var(--slate-gray);
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no expanda el ancho */
     position: relative;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: var(--tiffany-blue); /* Texto del encabezado */
-}
-
-header p {
-    color: var(--slate-gray); /* Texto de subtítulos */
 }
 
 header img {
@@ -42,11 +38,23 @@ header img {
     height: 50px;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--tiffany-blue);
+}
+
+header p {
+    color: var(--slate-gray);
+    margin-top: 5px;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
     justify-content: center;
+    margin: 20px 0;
 }
 
 nav ul li {
@@ -55,16 +63,24 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--tiffany-blue); /* Enlaces de navegación */
+    color: var(--tiffany-blue);
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
+    color: var(--mountbatten-pink);
     text-decoration: underline;
 }
 
 main {
     padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--oxford-blue);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    flex: 1; /* Permite que el main se expanda y empuje el footer hacia abajo */
 }
 
 section {
@@ -72,27 +88,19 @@ section {
 }
 
 section h2 {
-    color: var(--mountbatten-pink); /* Títulos de sección */
+    color: var(--mountbatten-pink);
     margin-bottom: 10px;
+    border-bottom: 2px solid var(--moonstone);
+    padding-bottom: 5px;
 }
 
-a {
-    color: pink; /* Color del enlace en el cuerpo del texto */
-    text-decoration: none;
-    transition: color 0.3s ease; /* Suave transición para el color del enlace */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
-a:hover {
-    color: whitesmoke; /* Cambiar a Tiffany Blue en hover */
-    text-decoration: underline;
-}
-
-a:visited {
-    color: var(--slate-gray); /* Cambiar a Slate Gray si el enlace ya ha sido visitado */
-}
-
-a:active {
-    color: var(--moonstone); /* Cambiar a Mountbatten Pink cuando el enlace está activo */
+li {
+    margin-bottom: 10px;
 }
 
 footer {
@@ -100,6 +108,27 @@ footer {
     text-align: center;
     padding: 10px;
     border-top: 2px solid var(--slate-gray);
-    margin-top: 40px;
     color: var(--slate-gray);
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no expanda el ancho */
+    margin-top: auto; /* Empuja el footer al fondo cuando el contenido es escaso */
+}
+
+a {
+    color: var(--tiffany-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--mountbatten-pink);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--slate-gray);
+}
+
+a:active {
+    color: var(--moonstone);
 }
