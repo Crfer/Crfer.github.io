@@ -1,6 +1,6 @@
 :root {
     --oxford-blue: #15233e;
-    --moonstone: #ecede8;
+    --moonstone: #d7d4ce;
     --tiffany-blue: #93e6e6;
     --slate-gray: #707f83;
     --mountbatten-pink: #96717f;
@@ -77,13 +77,13 @@ section h2 {
 }
 
 a {
-    color: var(--mountbatten-pink); /* Color del enlace en el cuerpo del texto */
+    color: pink; /* Color del enlace en el cuerpo del texto */
     text-decoration: none;
     transition: color 0.3s ease; /* Suave transición para el color del enlace */
 }
 
 a:hover {
-    color: var(--tiffany-blue); /* Cambiar a Tiffany Blue en hover */
+    color: whitesmoke; /* Cambiar a Tiffany Blue en hover */
     text-decoration: underline;
 }
 
